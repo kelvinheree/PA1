@@ -1,0 +1,27 @@
+<% provide(:title, 'Instructors') %>
+<h1>Instructors</h1>
+<% if logged_in? %>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @instructor.each do |instructor| %>
+        <tr>
+          <td><%= instructor.first %></td>
+          <td><%= instructor.last %></td>
+          <td><%= instructor.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h2>You must log in or sign up first</h2>
+
+<% end %>

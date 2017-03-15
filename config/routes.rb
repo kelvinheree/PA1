@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
-  get 'users/new'
-
-  get  '/help',    to: 'static_pages#help'
-  get  '/home',   to: 'static_pages#home'
+  get  '/home',   to: 'users#index'
   get  '/signup',  to: 'users#new'
   get    '/login',   to: 'sessions#new'
-  get '/root', to:'static_pages#home'
+  get '/', to:'users#index'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get '/courses', to: 'ucourses#new'
+  get '/instructors', to: 'instructors#new'
+  get '/subjects', to: 'subjects#new'
 
-  resources :users
+
+  resources :users,:ucourses,:instructors, :subjects
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

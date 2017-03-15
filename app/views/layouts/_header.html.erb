@@ -1,10 +1,20 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Courses", root_path, id: "logo" %>
+    <% if logged_in? %>
+      <%= link_to "BRANDEIS UNIVERSITY", current_user, id: "logo" %>
+    <% else %>
+      <%= link_to "BRANDEIS UNIVERSITY", "/", id: "logo" %>
+    <% end %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", '#' %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Home", current_user %></li>
+        <% else %>
+          <li><%= link_to "Home", "/" %></li>
+        <% end %>
+        <li><%= link_to "Subject", subjects_path %></li>
+        <li><%= link_to "Courses", courses_path %></li>
+        <li><%= link_to "Instructors", instructors_path %></li>
         <% if logged_in? %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -12,7 +22,6 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to "Log out", logout_path, method: "delete" %>
