@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  get '/search', to: 'ucourses#index'
   get  '/home',   to: 'users#index'
   get  '/signup',  to: 'users#new'
   get    '/login',   to: 'sessions#new'
