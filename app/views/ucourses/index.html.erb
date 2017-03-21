@@ -5,11 +5,12 @@
 <%= submit_tag "Search" %>
 <% end %>
 
+<% if logged_in? %>
 <% if @ucourse.blank? %>
 <p>There are no courses containing the term(s)
     <%= params[:search] %>.</p>
 <% else %>
-<% if logged_in? %>
+
 <table>
     <thead>
         <tr>
@@ -34,9 +35,8 @@
         <% end %>
     </tbody>
 </table>
+<% end %>
 <% else %>
 <h2>You must log in or sign up first</h2>
-
-<% end %>
 
 <% end %>
