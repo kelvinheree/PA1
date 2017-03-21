@@ -15,3 +15,12 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+//onclick dropdown
+$(document).ready(function() {
+
+  $("select#search").change(function(){
+    $(this).closest("form");
+  });
+
+});

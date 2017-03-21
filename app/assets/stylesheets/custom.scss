@@ -26,7 +26,7 @@ textarea {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 5;
+  line-height: 2;
 }
 
 h1 {
@@ -180,4 +180,15 @@ input {
 td
 {
     padding:15px 15px 15px 15px;
+}
+
+/* search */
+
+#search-form{
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+
+
+
 }

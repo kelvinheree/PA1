@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-
+  has_many :Enrollment
+  has_many :ucourses, through: :Enrollment
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: {maximum: 50 },
   uniqueness: { case_sensitive: false }

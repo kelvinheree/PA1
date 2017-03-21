@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  post '/enroll', to: 'ucourses#enroll'
   get '/search', to: 'ucourses#index'
   get  '/home',   to: 'users#index'
   get  '/signup',  to: 'users#new'

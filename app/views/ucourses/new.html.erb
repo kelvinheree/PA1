@@ -21,6 +21,8 @@
           <td><%= course.code %></td>
           <td><%= course.credits %></td>
           <td><%= course.requirements %></td>
+          <td><%= button_to "Enroll", { action: "enroll", id: course.id, name: course.name }
+                              %></td>
         </tr>
       <% end %>
     </tbody>
