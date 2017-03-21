@@ -17,10 +17,10 @@
 //= require_tree .
 
 //onclick dropdown
-$(document).ready(function() {
-
-  $("select#search").change(function(){
-    $(this).closest("form");
-  });
-
-});
+// $(document).ready(function() {
+//
+//   $("select#search").change(function(){
+//     $(this).closest("form");
+//   });
+//
+// });

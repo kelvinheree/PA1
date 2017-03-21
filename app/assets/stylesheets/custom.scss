@@ -34,6 +34,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: aqua;
 }
 
 h2 {
@@ -179,7 +180,14 @@ input {
 
 td
 {
-    padding:15px 15px 15px 15px;
+    padding:15px 15px 15px 0px;
+}
+
+th {
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-color: red;
+  color: aqua;
 }
 
 /* search */
@@ -188,7 +196,17 @@ td
   position: relative;
   margin: 0 auto;
   width: 800px;
+  box-sizing: border-box;
+  border: 5px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 20px 40px 12px 40px;
 }
+
+
 
 /* enroll list */
 
@@ -204,4 +222,13 @@ ul.a {
 ul.a li {
     background: #cce5ff;
     margin: 5px;
+}
+
+
+/* navbar */
+
+.navbar {
+  background-color: green;
+
+
 }
