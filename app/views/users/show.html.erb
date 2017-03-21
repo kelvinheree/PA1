@@ -4,16 +4,18 @@
     <%= @user.name %>!
 </h1>
 <h2>
-    Welcome to PA1 RAILS!
+    Welcome to PA RAILS!
     <br>
     Free free to browse around. You can view the subject list, instructors, or courses!
+    <p>
+    As of Part 2, you can now enroll in courses and search for courses!
 </h2>
 <br>
 <br>
 <h2>
     Courses Currently Enrolled In:
 
-    <ul>
+    <ul class="a">
         <% Enrollment.all.each do |enroll| %>
         <li><%= enroll.name %></li>
         <% end %>

@@ -188,7 +188,20 @@ td
   position: relative;
   margin: 0 auto;
   width: 800px;
+}
 
+/* enroll list */
 
+ul.a {
+    list-style-type: square;
+}
 
+ul.a {
+    background: #3399ff;
+    padding: 20px;
+}
+
+ul.a li {
+    background: #cce5ff;
+    margin: 5px;
 }
