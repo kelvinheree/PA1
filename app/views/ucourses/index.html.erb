@@ -17,3 +17,17 @@ Subject Filter:
 <h2>You must log in or sign up first</h2>
 
 <% end %>
+
+<script>
+$(document).ready
+$(function() {
+  $("#search-form input").keyup(function() {
+    $.get($("#search-form").attr("action"), $("#search-form").serialize(), null, "script");
+    return false;
+  });
+  $("#browse").click(function(){
+    $.get($("#search-form").attr("action"), $("#search-form").serialize(), null, "script");
+    return false;
+  });
+});
+</script>
