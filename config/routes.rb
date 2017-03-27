@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   post '/enroll', to: 'ucourses#enroll'
+  post '/drop', to: 'users#drop'
   get '/search', to: 'ucourses#index'
   get  '/home',   to: 'users#index'
   get  '/signup',  to: 'users#new'
