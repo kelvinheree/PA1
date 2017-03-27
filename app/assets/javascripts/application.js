@@ -16,11 +16,14 @@
 //= require turbolinks
 //= require_tree .
 
-//onclick dropdown
-// $(document).ready(function() {
-//
-//   $("select#search").change(function(){
-//     $(this).closest("form");
-//   });
-//
-// });
+$(document).ready
+$(function() {
+  $("#search-form input").keyup(function() {
+    $.get($("#search-form").attr("action"), $("#search-form").serialize(), null, "script");
+    return false;
+  });
+  $("#browse").click(function(){
+    $.get($("#search-form").attr("action"), $("#search-form").serialize(), null, "script");
+    return false;
+  });
+});
