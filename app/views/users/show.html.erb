@@ -17,7 +17,9 @@
 
     <ul class="a">
         <% Enrollment.all.each do |enroll| %>
-        <li><%= enroll.name %></li>
+          <% if enroll.user_id == current_user.id %>
+            <li><%= enroll.name %></li>
+          <% end %>
         <% end %>
     </ul>
 

@@ -6,13 +6,13 @@ class UcoursesController < ApplicationController
   def index
     @ucourse = Ucourse.all
     if params[:search] && params[:browse]
-      @ucourse = Ucourse.both(params[:search],params[:browse]).order("created_at DESC")
+      @ucourse = Ucourse.both(params[:search],params[:browse]).order("created_at DESC").paginate(:per_page => 5, :page => params[:page])
     elsif params[:search]
-      @ucourse = Ucourse.search(params[:search]).order("created_at DESC")
+      @ucourse = Ucourse.search(params[:search]).order("created_at DESC").paginate(:per_page => 5, :page => params[:page])
     elsif params[:browse]
-      @ucourse = Ucourse.subject(params[:browse]).order("created_at DESC")
+      @ucourse = Ucourse.subject(params[:browse]).order("created_at DESC").paginate(:per_page => 5, :page => params[:page])
     else
-      @ucourse = Ucourse.all.order('created_at DESC')
+      @ucourse = Ucourse.all.order('created_at DESC').paginate(:per_page => 5, :page => params[:page])
     end
 
 
