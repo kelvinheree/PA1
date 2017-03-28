@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    errors:
+      messages:
+        invalid: "must be a brandeis.edu email"
